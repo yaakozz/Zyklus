@@ -1,3 +1,4 @@
 pandas
 datetime
 altair
+streamlit_authenticator
