@@ -16,7 +16,6 @@ st.title("Schmerzen Auswertung")
 file_pain=load_data(api_key, bin_id)
 
 
-file_pain=dict(file_pain)
 
 
 pain = "pain"
