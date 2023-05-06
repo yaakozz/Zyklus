@@ -19,19 +19,17 @@ bin_id = jsonbin_secrets["bin_id"]
 file_medi1=load_data(api_key, bin_id)
 
 medi1 = "medi1"
-medi1s = [day[medi1]for key, day in file_medi1.items() if medi1 in day]
+Morgen = [day[medi1]for key, day in file_medi1.items() if medi1 in day]     #getting values from nested dictionary
 
-def medi1_element(medi1s):
-    taken_medi1s = []
-    for a in medi1s:
-        if a != "Paracetamol" or "Ibuprofen" or "Acetylsalicylsäure" or "Naproxen" or "Diclofenac":
-            taken_medi1s.append(a)
-    return taken_medi1s
+Mittag = [day[medi1]for key, day in file_medi1.items() if medi1 in day]
 
-taken_medi1ss = medi1_element(medi1s)
+Abend = [day[medi1]for key, day in file_medi1.items() if medi1 in day]
 
-drf = pd.DataFrame({
-    "medi1" : taken_medi1ss,
-    "day" : file_medi1.keys()})
+Schlafen = [day[medi1]for key, day in file_medi1.items() if medi1 in day]
 
-st.write("Eingenommene Medikamente", taken_medi1ss)
+Datum = file_medi1.keys()
+
+taken_medi = dict((k, eval(k)) for k in ("Morgen", "Mittag", "Abend", "Schlafen", "Datum"))     #creating dictionary for panda dataframe
+df = pd.DataFrame.from_dict(taken_medi, orient = "columns")
+
+st.dataframe(df, width=1024, height=768)
