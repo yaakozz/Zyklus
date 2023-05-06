@@ -7,7 +7,7 @@ Created on Fri May  5 12:05:32 2023
 
 import streamlit as st
 from datetime import datetime, date, timedelta 
-from jsonbin import load_data, save_data
+from jsonbin import load_data, save_data     #from jsonbin import load_key, save_key
 
 
 #import yaml
@@ -110,7 +110,10 @@ with col9:
 def save():
     
     
-    data=load_data(api_key, bin_id)
+    data=load_data(api_key, bin_id) #load_key(api_key, bin_id, key, empty_value=[])
+
+
+
 
 
  
@@ -130,7 +133,10 @@ def save():
         })
   
 
-    save_data(api_key, bin_id, data)
+    save_data(api_key, bin_id, data)  #save_key(api_key, bin_id, key, data)
+
+
+
 
 
 
