@@ -1,12 +1,16 @@
 import streamlit as st
 import pandas as pd
-import json
+from jsonbin import load_data, save_data
+
+# -------- load secrets for jsonbin.io --------
+jsonbin_secrets = st.secrets["jsonbin"]
+api_key = jsonbin_secrets["api_key"]
+bin_id = jsonbin_secrets["bin_id"]
 
 
 st.title("Notizen Auswertung")
 
-with open("data.json", "r")as file:
-    file_notice = json.load(file)
+file_notice=load_data(api_key, bin_id)
     
 notice = "notice"
 notes = [day[notice]for key, day in file_notice.items() if notice in day]   #getting values from nested dictionary
