@@ -7,7 +7,9 @@ Created on Fri May  5 12:05:32 2023
 
 import streamlit as st
 from datetime import datetime, date, timedelta 
-from jsonbin import load_key, save_key
+from jsonbin import load_data, save_data
+
+
 #import yaml
 #from yaml.loader import SafeLoader
 #import streamlit_authenticator as stauth
