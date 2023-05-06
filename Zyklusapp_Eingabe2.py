@@ -108,9 +108,10 @@ with col9:
 def save():
     
     
-    with open('data.json','r') as file:
-        data=json.load(file)
-    
+    data=load_key(api_key, bin_id)
+
+
+ 
     data.update({
             str(date): {
                 'pain': pain,
@@ -125,11 +126,12 @@ def save():
                 'temperatur': temperatur
             }
         })
-    
-    #st.write(data)
-    with open('data.json','w') as file:
-        json.dump(data,file,indent=4)
-        
+  
+
+    save_key(api_key, bin_id, data)
+
+
+
         
            
     return 
