@@ -148,7 +148,7 @@ bin_id = jsonbin_secrets["bin_id"]
     #config['cookie']['key'],
     #config['cookie']['expiry_days'],
     #config['preauthorized']
-)
+#)
 
 #name, authentication_status, username = authenticator.login('Login', 'main')
 
