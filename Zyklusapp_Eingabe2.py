@@ -9,9 +9,9 @@ import streamlit as st
 from datetime import datetime, date, timedelta 
 import json
 from jsonbin import load_key, save_key
-import yaml
-from yaml.loader import SafeLoader
-import streamlit_authenticator as stauth
+#import yaml
+#from yaml.loader import SafeLoader
+#import streamlit_authenticator as stauth
 
 st.title("Zyklusapp")
 
@@ -139,27 +139,27 @@ api_key = jsonbin_secrets["api_key"]
 bin_id = jsonbin_secrets["bin_id"]
 
 # -------- user login --------
-with open('config.yaml') as file:
-    config = yaml.load(file, Loader=SafeLoader)
+#with open('config.yaml') as file:
+    #config = yaml.load(file, Loader=SafeLoader)
 
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
+#authenticator = stauth.Authenticate(
+    #config['credentials'],
+    #config['cookie']['name'],
+    #config['cookie']['key'],
+    #config['cookie']['expiry_days'],
+    #config['preauthorized']
 )
 
-name, authentication_status, username = authenticator.login('Login', 'main')
+#name, authentication_status, username = authenticator.login('Login', 'main')
 
-if authentication_status == True:   # login successful
-    authenticator.logout('Logout', 'main')   # show logout button
-elif authentication_status == False:
-    st.error('Username/password is incorrect')
-    st.stop()
-elif authentication_status == None:
-    st.warning('Please enter your username and password')
-    st.stop()
+#if authentication_status == True:   # login successful
+    #authenticator.logout('Logout', 'main')   # show logout button
+#elif authentication_status == False:
+    #st.error('Username/password is incorrect')
+    #st.stop()
+#elif authentication_status == None:
+    #st.warning('Please enter your username and password')
+    #st.stop()
 
 
 
