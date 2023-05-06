@@ -7,11 +7,15 @@ Created on Fri May  5 12:05:32 2023
 
 import streamlit as st
 from datetime import datetime, date, timedelta 
-import json
 from jsonbin import load_key, save_key
 #import yaml
 #from yaml.loader import SafeLoader
 #import streamlit_authenticator as stauth
+
+# -------- load secrets for jsonbin.io --------
+jsonbin_secrets = st.secrets["jsonbin"]
+api_key = jsonbin_secrets["api_key"]
+bin_id = jsonbin_secrets["bin_id"]
 
 st.title("Zyklusapp")
 
@@ -133,10 +137,6 @@ button = st.button('Speichern',on_click=save)
 
 # Test
 
-# -------- load secrets for jsonbin.io --------
-jsonbin_secrets = st.secrets["jsonbin"]
-api_key = jsonbin_secrets["api_key"]
-bin_id = jsonbin_secrets["bin_id"]
 
 # -------- user login --------
 #with open('config.yaml') as file:
