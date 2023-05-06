@@ -108,7 +108,7 @@ with col9:
 def save():
     
     
-    data=load_key(api_key, bin_id)
+    data=load_data(api_key, bin_id)
 
 
  
@@ -128,7 +128,7 @@ def save():
         })
   
 
-    save_key(api_key, bin_id, data)
+    save_data(api_key, bin_id, data)
 
 
 
