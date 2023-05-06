@@ -1,14 +1,25 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import json
+from jsonbin import load_data, save_data
+
+# -------- load secrets for jsonbin.io --------
+jsonbin_secrets = st.secrets["jsonbin"]
+api_key = jsonbin_secrets["api_key"]
+bin_id = jsonbin_secrets["bin_id"]
 
 
 st.title("Schmerzen Auswertung")
 
 #barchart with pandas for pain
-with open("data.json", "r")as file:
-    file_pain = json.load(file)
+
+file_pain=load_data(api_key, bin_id)
+
+
+
+
+
+
 
 
 pain = "pain"
