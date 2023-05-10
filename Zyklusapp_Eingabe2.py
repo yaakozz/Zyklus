@@ -12,26 +12,6 @@ jsonbin_secrets = st.secrets["jsonbin"]
 api_key = jsonbin_secrets["api_key"]
 bin_id = jsonbin_secrets["bin_id"]
 
-# -------- user login --------
-
-
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-)
-
-fullname, authentication_status, username = authenticator.login('Login', 'main')
-
-if authentication_status == True:   # login successful
-    authenticator.logout('Logout', 'main')   # show logout button
-elif authentication_status == False:
-    st.error('Username/password is incorrect')
-    st.stop()
-elif authentication_status == None:
-    st.warning('Please enter your username and password')
-    st.stop()
 
 st.title("Zyklusapp")
 
