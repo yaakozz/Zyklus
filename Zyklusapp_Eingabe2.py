@@ -13,8 +13,7 @@ api_key = jsonbin_secrets["api_key"]
 bin_id = jsonbin_secrets["bin_id"]
 
 # -------- user login --------
-with open('config.yaml') as file:
-    config = yaml.load(file, Loader=SafeLoader)
+
 
 authenticator = stauth.Authenticate(
     config['credentials'],
