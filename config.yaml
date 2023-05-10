@@ -1,0 +1,13 @@
+credentials:
+  usernames:
+    samuel:
+      email: yingyidu@gmail.com
+      name: Ying Yi Du
+      password: $2b$12$Rpt9L3rMY/hBeupMwX9Am.vH/hNSvGmYQAoYFqiHIEofKRJ53N5Fe  # To be replaced with hashed password
+    guest:
+      name: Gast
+      password: $2b$12$Rpt9L3rMY/hBeupMwX9Am.vH/hNSvGmYQAoYFqiHIEofKRJ53N5Fe  # To be replaced with hashed password
+cookie:
+  expiry_days: 30  # number of days until password is asked again
+  key: JgDyEoKUNItM5prxo194jDeLYzVzmYE6 # Must be string, use https://randomkeygen.com/
+  name: streamlitcookie
