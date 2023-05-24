@@ -41,28 +41,40 @@ st.title("Menstruationsblutung Auswertung")
 
 file_intensity=load_key(api_key, bin_id, username)
 
-st.write(file_intensity[date])
+df = pd.DataFrame(data)
+df = df.melt(var_name='Index', value_name='Values')
+df[['Date', 'Index']] = pd.DataFrame(df['Index'].tolist())
 
-file_intensity_dataframe=pd.DataFrame(file_intensity)
+# Erstelle das Balkendiagramm
+chart = alt.Chart(df).mark_bar().encode(
+    x='Date',
+    y='Values',
+    color='Index',
+    tooltip=['Date', 'Index', 'Values']
+).properties(
+    width=600,
+    height=400
+)
 
-st.write(file_intensity_dataframe)
+# Zeige das Balkendiagramm in Streamlit an
+st.altair_chart(chart)
 
     
-intensity = "intensity"
+#intensity = "intensity"
 #bleeding = [day[intensity]for key, day in file_intensity.items() if intensity in day]   #getting values from nested dictionary
 
     
 
-daf = pd.DataFrame({
-    "intensity" : bleeding,
-    "day" : file_intensity.keys()
-    })
+#daf = pd.DataFrame({
+ #   "intensity" : bleeding,
+  #  "day" : file_intensity.keys()
+   # })
 
 st.write("Gemessene Werte", bleeding)
 
 
-bar_chart = alt.Chart(daf).mark_line().encode(
-    x = "day",
-    y = alt.Y("intensity", scale=alt.Scale(reverse=True)))
+#bar_chart = alt.Chart(daf).mark_line().encode(
+ #   x = "day",
+  #  y = alt.Y("intensity", scale=alt.Scale(reverse=True)))
 
-st.altair_chart(bar_chart, use_container_width = True)
+#st.altair_chart(bar_chart, use_container_width = True)
