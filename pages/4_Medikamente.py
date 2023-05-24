@@ -16,7 +16,7 @@ bin_id = jsonbin_secrets["bin_id"]
 
 #Dataframe with pandas for medis
 
-file_medi1=load_data(api_key, bin_id)
+df=file_medi1=load_data(api_key, bin_id)
 
 medi1 = "medi1"
 Morgen = [day[medi1]for key, day in file_medi1.items() if medi1 in day]     #getting values from nested dictionary
@@ -34,5 +34,5 @@ Tag = file_medi1.keys()
 
 taken_medi = dict((k, eval(k)) for k in ("Morgen", "Mittag", "Abend", "Schlafen", "Tag"))     #creating dictionary for panda dataframe
 #df = pd.DataFrame.from_dict(taken_medi, orient = "columns")
-
+st.dataframe(df)
 #st.dataframe(df, width=1024, height=768)
