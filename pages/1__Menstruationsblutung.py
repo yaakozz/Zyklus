@@ -43,7 +43,8 @@ file_intensity=load_key(api_key, bin_id, username)
 
     
 intensity = "intensity"
-bleeding = [day[intensity]for key, day in file_intensity.items() if intensity in day]   #getting values from nested dictionary
+bleeding = [username[day[intensity]for key, day in file_intensity.items() if intensity in day]]   #getting values from nested dictionary
+
     
 
 daf = pd.DataFrame({
