@@ -17,6 +17,7 @@ bin_id = jsonbin_secrets["bin_id"]
 #Dataframe with pandas for medis
 
 file_medi1=load_data(api_key, bin_id)
+st.write(file_medi1)
 dfML=pd.DataFrame(file_medi1)
 st.dataframe(dfML)
 
