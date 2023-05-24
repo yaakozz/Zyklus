@@ -58,7 +58,7 @@ daf = pd.DataFrame({
     "day" : file_intensity.keys()
     })
 
-st.write("Gemessene Werte", bleeding)
+#st.write("Gemessene Werte", bleeding)
 
 
 bar_chart = alt.Chart(daf).mark_line().encode(
