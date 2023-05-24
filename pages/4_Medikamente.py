@@ -41,6 +41,11 @@ file_medi1=load_key(api_key, bin_id, username)
 #dfML=pd.DataFrame(file_medi1)
 #st.dataframe(dfML)
 
+Leer={}
+for key in file_medi1:
+    Leer.update(key)
+file_medi1=Leer
+
 
 medi1 = "medi1"
 Morgen = [day[medi1]for key, day in file_medi1.items() if medi1 in day]     #getting values from nested dictionary
