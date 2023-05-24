@@ -40,7 +40,7 @@ st.title("Menstruationsblutung Auswertung")
 #barchart with pandas for Menstruationblutung
 
 file_intensity=load_key(api_key, bin_id, username)
-st.write(file_intensity)
+st.write(file_intensity["date"])
     
 intensity = "intensity"
 #bleeding = [day[intensity]for key, day in file_intensity.items() if intensity in day]   #getting values from nested dictionary
