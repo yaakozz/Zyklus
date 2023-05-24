@@ -43,7 +43,7 @@ file_intensity=load_key(api_key, bin_id, username)
 
 
 for key in file_intensity:
-    df=pd.DataFrame(key.values()).T
+    df=pd.DataFrame(key).T
     st.write(df)
     
 intensity = "intensity"
