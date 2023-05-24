@@ -41,6 +41,8 @@ st.title("Menstruationsblutung Auswertung")
 
 file_intensity=load_key(api_key, bin_id, username)
 
+st.write(file_intensity[date])
+
 file_intensity_dataframe=pd.DataFrame(file_intensity)
 
 st.write(file_intensity_dataframe)
