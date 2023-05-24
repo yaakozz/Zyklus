@@ -44,7 +44,7 @@ file_temperature=load_key(api_key, bin_id, username)
 Leer={}
 for key in file_temperature:
     Leer.update(key)
-file_temperatur=Leer
+file_temperature=Leer
         
     #all measured Temperatures
 temp = "temperatur"
