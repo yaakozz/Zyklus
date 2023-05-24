@@ -43,7 +43,7 @@ file_intensity=load_key(api_key, bin_id, username)
 
 Leer={}
 for key in file_intensity:
-    Leer.append(key)
+    Leer.update(key)
     df=pd.DataFrame(key).T
     
     
