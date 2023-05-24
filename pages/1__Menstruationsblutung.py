@@ -44,8 +44,8 @@ file_intensity=load_key(api_key, bin_id, username)
 Leer=pd.DataFrame(None)
 for key in file_intensity:
     df=pd.DataFrame(key).T
-    Leer.append(key)
-    st.write(Leer["intensity"])
+    data=merge(key)
+    st.write(data)
     
   
     
