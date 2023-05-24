@@ -40,10 +40,10 @@ st.title("Menstruationsblutung Auswertung")
 
 file_intensity=load_key(api_key, bin_id, username)
 
-
+st.write(file_intensity)
     
 intensity = "intensity"
-bleeding = [username[day[intensity]for key, day in file_intensity.items() if intensity in day]]   #getting values from nested dictionary
+bleeding = [day[intensity]for key, day in file_intensity.items() if intensity in day]   #getting values from nested dictionary
 
     
 
