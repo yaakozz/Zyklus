@@ -43,6 +43,7 @@ file_intensity=load_key(api_key, bin_id, username)
 
 for key in file_intensity:
     file_intensity= key
+    st.write(key)
     
 intensity = "intensity"
 bleeding = [day[intensity]for key, day in file_intensity.items() if intensity in day]   #getting values from nested dictionary
