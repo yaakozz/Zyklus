@@ -67,7 +67,7 @@ df = pd.DataFrame({
 #st.write("Gemessene Werte", temp_not_none(temperatures))
 
 
-bar_chart = alt.Chart(df).mark_bar().encode(
+bar_chart = alt.Chart(df).mark_line().encode(
         y='temperatur',
         x='day',
     )
