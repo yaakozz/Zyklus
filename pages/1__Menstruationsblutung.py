@@ -44,7 +44,7 @@ bald_nicht_leer=[]
 for key in file_intensity:
     key = pd.DataFrame(key)
     bald_nicht_leer.append(key)
-st.write(bald_nicht_leer)
+st.dataframe(bald_nicht_leer)
     
 
     
