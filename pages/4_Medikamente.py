@@ -35,4 +35,4 @@ Tag = file_medi1.keys()
 taken_medi = dict((k, eval(k)) for k in ("Morgen", "Mittag", "Abend", "Schlafen", "Tag"))     #creating dictionary for panda dataframe
 #df = pd.DataFrame.from_dict(taken_medi, orient = "columns")
 
-st.dataframe(df, width=1024, height=768)
+#st.dataframe(df, width=1024, height=768)
