@@ -38,7 +38,7 @@ st.title("Menstruationsblutung Auswertung")
 
 #barchart with pandas for Menstruationblutung
 
-file_intensity=load_data(api_key, bin_id)
+file_intensity=load_key(api_key, bin_id, username)
 
 
     
