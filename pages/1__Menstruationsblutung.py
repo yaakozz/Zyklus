@@ -41,7 +41,7 @@ st.title("Menstruationsblutung Auswertung")
 
 file_intensity=load_key(api_key, bin_id, username)
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(file_intensity)
 df = df.melt(var_name='Index', value_name='Values')
 df[['Date', 'Index']] = pd.DataFrame(df['Index'].tolist())
 
