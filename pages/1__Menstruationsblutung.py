@@ -45,7 +45,7 @@ intensity = "intensity"
 leer
 for key in file_intensity:
     key = pd.DataFrame(key)
-    st.write(key[intensity]))
+    st.write(key[intensity])
 
     
 
