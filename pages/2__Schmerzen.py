@@ -56,7 +56,7 @@ dif = pd.DataFrame({
     "day" : file_pain.keys()
     })
 
-st.write("Gemessene Werte", pain_values)
+#st.write("Gemessene Werte", pain_values)
 
 st.line_chart(dif, x= "day", y = "pain")
 
