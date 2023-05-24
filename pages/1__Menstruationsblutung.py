@@ -42,7 +42,7 @@ st.title("Menstruationsblutung Auswertung")
 file_intensity=load_key(api_key, bin_id, username)
 bald_nicht_leer=[]
 for key in file_intensity:
-    file_intensity= bald_nicht_leer.append(key)
+    file_intensity= bald_nicht_leer.insert(key)
     
 
     
