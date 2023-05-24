@@ -45,6 +45,7 @@ Leer={}
 for key in file_intensity:
     Leer.update(key)
     df=pd.DataFrame(key).T
+    st.write(Leer)
     
     
   
