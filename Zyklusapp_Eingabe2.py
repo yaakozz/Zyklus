@@ -132,7 +132,7 @@ def save():
 
 
  
-    data.update({
+    data.append({
             str(date): {
                 'pain': pain,
                 'medi1': medi1,
