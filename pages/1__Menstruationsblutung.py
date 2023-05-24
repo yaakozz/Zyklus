@@ -45,9 +45,9 @@ st.write(file_intensity)
 intensity = "intensity"
 #bleeding = [day[intensity]for key, day in file_intensity.items() if intensity in day]   #getting values from nested dictionary
 
-# Extrahiere den Wert der Intensität für jeden Tag
-bleeding = [day[intensity] for day in file_intensity.values() if intensity in day]
 
+# Extract the value of intensity for each day
+bleeding = [day[date][intensity] for day in file_intensity for date in day]
 
     
 
