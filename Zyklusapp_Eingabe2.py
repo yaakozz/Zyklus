@@ -1,6 +1,6 @@
 import streamlit as st
 from datetime import datetime, date, timedelta 
-from jsonbin import load_data, save_data     #from jsonbin import load_key, save_key
+from jsonbin import load_key, save_key     #from jsonbin import load_key, save_key
 import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
@@ -125,7 +125,7 @@ with col9:
 def save():
     
     
-    data=load_data(api_key, bin_id) #load_key(api_key, bin_id, key, empty_value=[])
+    data=load_key(api_key, bin_id,username) #load_key(api_key, bin_id, key, empty_value=[])
 
 
 
@@ -148,7 +148,7 @@ def save():
         })
   
 
-    save_data(api_key, bin_id, data)  #save_key(api_key, bin_id, key, data)
+    save_key(api_key, bin_id, username, data)  #save_key(api_key, bin_id, key, data)
 
 
 
@@ -160,31 +160,7 @@ def save():
     return 
 button = st.button('Speichern',on_click=save)
 
-# Test
 
-
-# -------- user login --------
-#with open('config.yaml') as file:
-    #config = yaml.load(file, Loader=SafeLoader)
-
-#authenticator = stauth.Authenticate(
-    #config['credentials'],
-    #config['cookie']['name'],
-    #config['cookie']['key'],
-    #config['cookie']['expiry_days'],
-    #config['preauthorized']
-#)
-
-#name, authentication_status, username = authenticator.login('Login', 'main')
-
-#if authentication_status == True:   # login successful
-    #authenticator.logout('Logout', 'main')   # show logout button
-#elif authentication_status == False:
-    #st.error('Username/password is incorrect')
-    #st.stop()
-#elif authentication_status == None:
-    #st.warning('Please enter your username and password')
-    #st.stop()
 
 
 
