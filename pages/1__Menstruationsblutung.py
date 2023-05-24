@@ -41,11 +41,11 @@ st.title("Menstruationsblutung Auswertung")
 
 file_intensity=load_key(api_key, bin_id, username)
 
-Leer=pd.DataFrame(None)
+Leer={}
 for key in file_intensity:
+    Leer.append(key)
     df=pd.DataFrame(key).T
-    data=pd.merge(key)
-    st.write(data)
+    
     
   
     
