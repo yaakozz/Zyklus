@@ -40,10 +40,10 @@ st.title("Menstruationsblutung Auswertung")
 #barchart with pandas for Menstruationblutung
 
 file_intensity=load_key(api_key, bin_id, username)
-
+bald_nicht_leer=[]
 for key in file_intensity:
-    file_intensity= key
-    st.dataframe(key)
+    file_intensity= bald_nicht_leer.append(key)
+    
 
     
 intensity = "intensity"
