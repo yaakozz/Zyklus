@@ -12,7 +12,7 @@ bin_id = jsonbin_secrets["bin_id"]
 
 # -------- user login --------
 with open('config.yaml') as file:
-    #config = yaml.load(file, Loader=SafeLoader)
+    config = yaml.load(file, Loader=SafeLoader)
 
 authenticator = stauth.Authenticate(
     config['credentials'],
