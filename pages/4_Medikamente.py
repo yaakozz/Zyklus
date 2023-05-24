@@ -62,7 +62,6 @@ Schlafen = [day[medi4]for key, day in file_medi1.items() if medi4 in day]
 Tag = file_medi1.keys()
 
 taken_medi = dict((k, eval(k)) for k in ("Morgen", "Mittag", "Abend", "Schlafen", "Tag"))     #creating dictionary for panda dataframe
-st.write(taken_medi)
-#df = pd.DataFrame.from_dict(taken_medi, orient = "index", columns=['values'])
+
 df = pd.DataFrame(taken_medi)
 st.dataframe(df, width=1024, height=768)
