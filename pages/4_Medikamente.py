@@ -37,8 +37,7 @@ taken_medi = {
     "Morgen": Morgen,
     "Mittag": Mittag,
     "Abend": Abend,
-    "Schlafen": Schlafen,
-    "Tag": Tag
+    "Schlafen": Schlafen
 }
 df = pd.DataFrame.from_dict(taken_medi, orient = "index", columns=['values'])
 #st.dataframe(df, width=1024, height=768)
